@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/d994b3de4f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>weather app challenge</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- section1 -->
+        <div class="section-1 active col-md-4 col-12" id="sec1">
+          <div class="container d-flex justify-content-between cont1">
+            <button class="btn btn-light" onclick="next()" type="button">
+              Search For Places
+            </button>
+            <i class="fa-solid fa-location-crosshairs"></i>
+          </div>
+          <div class="content" id="mainmenu">
+            <div class="">
+              <img class="img-fluid py-4" src="/img/Shower.png" alt="" />
+            </div>
+            <div class="temp temperature active py-3" id="cel5">
+              <span class="n1">1</span><span class="n2">5</span
+              ><span class="tem">°c</span>
+            </div>
+            <div class="temp temperature py-3" id="feh5">
+              <span class="n1">5</span><span class="n2">9</span
+              ><span class="tem">°f</span>
+            </div>
+            <div class="shower py-5" style="opacity: 50%">
+              <h1>Shower</h1>
+            </div>
+            <div class="date" style="opacity: 50%">
+              <h5>Today . Fri, 5 Jun</h5>
+            </div>
+            <div class="d-flex location pb-5 pt-4" style="opacity: 50%">
+              <i
+                class="fa-solid fa-location-dot"
+                style="color: #ffff; margin-top: 5px"
+              ></i>
+              <h5 style="margin-left: 10px">Helsinki</h5>
+            </div>
+          </div>
+        </div>
+        <!-- section2 -->
+
+        <section class="section-2 col-md-4 col-12" id="sec2">
+          <div class="d-flex justify-content-end">
+            <i class="fa-solid fa-xmark" type="button" onclick="next()"></i>
+          </div>
+          <div class="d-flex justify-content-around py-5">
+            <div>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="search for location" />
+            </div>
+            <button class="btn">Search</button>
+          </div>
+          <div class="d-flex justify-content-center">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>London</option>
+              <option value="1">Paris</option>
+              <option value="2">Berline</option>
+              <option value="3">Amsterdam</option>
+            </select>
+          </div>
+          <div class="container py-5">
+            <div class="py-5"><h5>Barcelona</h5></div>
+            <div class="py-5"><h5>Long Beach</h5></div>
+          </div>
+        </section>
+
+        <div class="col-md-8 col-12">
+          <div class="container container2">
+            <div class="CF">
+              <h5 class="C" type="button" onclick="celsius()">°C</h5>
+              <h5 class="F" type="button" onclick="fahrenheit()">°F</h5>
+            </div>
+            <div
+              class="d-md-flex justify-content-between py-4 weeklist"
+              style="color: white"
+            >
+              <div class="card">
+                <h5 class="date">Tomorrow</h5>
+                <img src="/img/Sleet.png" />
+                <div class="temperature active" id="cel0">
+                  <div class="temp">
+                    <h5><span>1</span>6°C</h5>
+                    <h5 class="ntemp"><span>11</span>°C</h5>
+                  </div>
+                </div>
+                <div class="temperature" id="feh0">
+                  <div class="temp">
+                    <h5><span>6</span>1°F</h5>
+                    <h5 class="ntemp"><span>52</span>°F</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="date">Sun,7 Jun</h5>
+                <img src="/img/Clear.png" />
+                <div class="temperature active" id="cel1">
+                  <div class="temp">
+                    <h5><span>1</span>6°C</h5>
+                    <h5 class="ntemp"><span>11</span>°C</h5>
+                  </div>
+                </div>
+                <div class="temperature" id="feh1">
+                  <div class="temp">
+                    <h5><span>6</span>1°F</h5>
+                    <h5 class="ntemp"><span>52</span>°F</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="date">Mon,8 Jun</h5>
+                <img src="/img/HeavyCloud.png" />
+                <div class="temperature active" id="cel2">
+                  <div class="temp">
+                    <h5><span>1</span>6°C</h5>
+                    <h5 class="ntemp"><span>11</span>°C</h5>
+                  </div>
+                </div>
+                <div class="temperature" id="feh2">
+                  <div class="temp">
+                    <h5><span>6</span>1°F</h5>
+                    <h5 class="ntemp"><span>52</span>°F</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="date">Tue,9 JUn</h5>
+                <img src="/img/Snow.png" />
+                <div class="temperature active" id="cel3">
+                  <div class="temp">
+                    <h5><span>1</span>6°C</h5>
+                    <h5 class="ntemp"><span>11</span>°C</h5>
+                  </div>
+                </div>
+                <div class="temperature" id="feh3">
+                  <div class="temp">
+                    <h5><span>6</span>1°F</h5>
+                    <h5 class="ntemp"><span>52</span>°F</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="date">Wed,10 Jun</h5>
+                <img src="/img/Thunderstorm.png" />
+                <div class="temperature active" id="cel4">
+                  <div class="temp">
+                    <h5><span>1</span>6°C</h5>
+                    <h5 class="ntemp"><span>11</span>°C</h5>
+                  </div>
+                </div>
+                <div class="temperature" id="feh4">
+                  <div class="temp">
+                    <h5><span>6</span>1°F</h5>
+                    <h5 class="ntemp"><span>52</span>°F</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="py-5">
+              <h3 class="text-light">Today's Highlights</h3>
+            </div>
+            <div class="bcards">
+              <div class="d-md-flex justify-content-between">
+                <div
+                  class="col-md-5 card d-flex flex-column align-items-center"
+                >
+                  <h5>Wind Status</h5>
+                  <h2>7<span>mph</span></h2>
+                  <div class="d-flex">
+                    <i class="fa-solid fa-location-arrow"></i>
+                    <h6 style="margin-top: 5px">WSW</h6>
+                  </div>
+                </div>
+                <div
+                  class="col-md-5 card d-flex flex-column align-items-center"
+                >
+                  <h5>Humidity</h5>
+                  <h2>87<span>%</span></h2>
+                  <div class="h-line">
+                    <div class="d-flex">
+                      <h6 style="margin-right: 83px">0</h6>
+                      <h6>50</h6>
+                      <h6 style="margin-left: 83px">100</h6>
+                    </div>
+                    <hr class="hr1" />
+                    <hr class="hr2" />
+                    <h6 style="margin-left: 198px">%</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="d-md-flex justify-content-between pt-5">
+                <div
+                  class="col-md-5 card d-flex flex-column align-items-center"
+                >
+                  <h5>Visibility</h5>
+                  <h2>6.7 <span>miles</span></h2>
+                </div>
+                <div
+                  class="col-md-5 card d-flex flex-column align-items-center"
+                >
+                  <h5>Air Pressure</h5>
+                  <h2>998 <span>mb</span></h2>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h6
+                class="text-light pt-5 d-flex justify-content-center"
+                style="opacity: 50%"
+              >
+                created by Axel HARZI - devChallenges.io
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
